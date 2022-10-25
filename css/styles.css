@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Evita os elementos filhos passarem da largura do elemento pai */
+    font-family: Helvetica;
+}
+
+body {
+    background-color: #243a69;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+#calc {
+    width: 400px;
+    padding: .5em;
+    background-color: #c4c4c4;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    border: 4px solid #191013;
+    box-shadow: 8px 8px #172542;
+}
+
+#calc h3 {
+    font-size: 1em;
+    font-weight: 300;
+    color: #191013;
+    margin-bottom: 10px;
+}
+
+#operations {
+    text-align: right; /* Os números vão aparecer da direita para a esquerda */
+}
+
+#previous-operation,
+#current-operation {
+    min-height: 2em; /* Estabelece a altura dos números */
+    padding: .2em;
+    overflow-wrap: break-word; /* Evita "vazar" os números para fora do visor */
+}
+
+#previous-operation {
+    color: rgb(78, 78, 78); 
+    border-top: 1px solid #191013; 
+    border-right: 1px solid #191013; 
+    border-left: 1px solid #191013; 
+}
+
+#current-operation {
+    font-size: 3em;
+    font-weight: 700;
+    border-right: 1px solid #191013;
+    border-bottom: 1px solid #191013; 
+    border-left: 1px solid #191013;
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Faz com que a grid tenha 4 colunas */
+    gap: 3px;
+}
+
+#buttons button {
+    border: 1px solid transparent;
+    border-radius: 0;
+    height: 4em;
+    font-size: 1.2em;
+    background-color: #dbdbdb;
+    cursor: pointer;
+}
+
+#buttons button:hover {
+    background-color: #bababa;
+    border-color: #999;
+}
+
+#buttons .number {
+    background-color: #f3f3f3;
+}
+
+#buttons #equal-btn {
+    grid-column: span 2; /* Irá ocupar o espaço de 2 colunas */
+    background-color: #6c88c2;
+}
+
+#buttons #equal-btn:hover {
+    background-color: #243a69;
+}
