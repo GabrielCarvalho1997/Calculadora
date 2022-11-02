@@ -50,6 +50,7 @@ body {
 }
 
 #current-operation {
+    margin-bottom: 5px;
     font-size: 3em;
     font-weight: 700;
     border-right: 1px solid #191013;
